@@ -1,0 +1,1017 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-23",
+  "methodology": "Alphabetical directory, not a ranking. Controls summarize primary sources. Real-time labels describe author claims, not verified performance. License labels refer to selected weight model cards; unresolved conflicts are explicit. Listed endpoints do not guarantee access or live capacity.",
+  "providers": [
+    {
+      "name": "fal",
+      "url": "https://fal.ai/explore/worlds",
+      "note": "Worlds catalog; model coverage must be checked at the destination."
+    },
+    {
+      "name": "Reactor",
+      "url": "https://www.reactor.inc/models",
+      "note": "Model catalog; availability varies by model."
+    },
+    {
+      "name": "Windflow",
+      "url": "https://windflow.online/models",
+      "note": "Maintainer-operated model catalog; availability varies by model."
+    }
+  ],
+  "models": [
+    {
+      "id": "1x-world-model",
+      "name": "1X World Model",
+      "category": "Robotics",
+      "controls": "Robot action and video modeling",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/1x-technologies/GENIE_138M",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/1x-technologies/1xgpt"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/1x-technologies/GENIE_138M"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "abot-world",
+      "name": "ABot-World",
+      "category": "Navigation",
+      "controls": "Image and action-conditioned generation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/acvlab/ABot-World-0-5B-LF",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/amap-cvlab/ABot-World"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/acvlab/ABot-World-0-5B-LF"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "alayaworld",
+      "name": "AlayaWorld",
+      "category": "Navigation",
+      "controls": "Interactive world generation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/AlayaLab/AlayaWorld",
+      "weightLicense": "other",
+      "commercial": "Custom terms",
+      "licenseNote": "The model card specifies the LTX-2 Community License, including a revenue-based commercial licensing condition.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/alaya-lab/AlayaWorld"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/AlayaLab/AlayaWorld"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "cosmos-predict2-5",
+      "name": "Cosmos Predict2.5",
+      "category": "Physical simulation",
+      "controls": "Text, image and video conditioning",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/nvidia/Cosmos-Predict2.5-2B",
+      "weightLicense": "other",
+      "commercial": "Custom terms",
+      "licenseNote": "The selected weights use custom or component-specific terms; consult the linked model card and license.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/nvidia-cosmos/cosmos-predict2.5"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/nvidia/Cosmos-Predict2.5-2B"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "ctrl-world",
+      "name": "Ctrl-World",
+      "category": "Robotics",
+      "controls": "Robot manipulation actions",
+      "weights": "Unverified",
+      "weightsUrl": null,
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://ctrl-world.github.io/"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "diamond",
+      "name": "DIAMOND",
+      "category": "Games",
+      "controls": "Action-conditioned game simulation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/eloialonso/diamond",
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/eloialonso/diamond"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/eloialonso/diamond"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "dreamx-world",
+      "name": "DreamX-World",
+      "category": "Navigation",
+      "controls": "Action-conditioned world generation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/GD-ML/DreamX-World-5B",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/AMAP-ML/DreamX-World"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/GD-ML/DreamX-World-5B"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "edenlive",
+      "name": "EdenLive",
+      "category": "Video interaction",
+      "controls": "Live video and scene prompts",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/VAST-AI/EdenLive",
+      "weightLicense": "other",
+      "commercial": "Custom terms",
+      "licenseNote": "Mixed component licenses. The optional FLUX first-frame workbench is non-commercial; the video pipeline has separate component terms.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/VAST-AI-Research/EdenLive"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/VAST-AI/EdenLive"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Reactor",
+          "url": "https://www.reactor.inc/models/eden-live",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/edenlive",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "gamefactory",
+      "name": "GameFactory",
+      "category": "Games",
+      "controls": "Action-conditioned game video",
+      "weights": "Unverified",
+      "weightsUrl": null,
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/KlingAIResearch/GameFactory"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "gamegen-x",
+      "name": "GameGen-X",
+      "category": "Games",
+      "controls": "Interactive game video generation",
+      "weights": "Unverified",
+      "weightsUrl": null,
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/GameGen-X/GameGen-X"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "genie",
+      "name": "Genie",
+      "category": "Games",
+      "controls": "Latent actions in generated environments",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://arxiv.org/abs/2402.15391"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "genie-2",
+      "name": "Genie 2",
+      "category": "Navigation",
+      "controls": "Keyboard and mouse navigation",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "genie-3",
+      "name": "Genie 3",
+      "category": "Navigation",
+      "controls": "Prompted worlds and live navigation",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://deepmind.google/models/genie/"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "genie-envisioner",
+      "name": "Genie Envisioner",
+      "category": "Robotics",
+      "controls": "Action-conditioned robot video",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/agibot-world/Genie-Envisioner-v1.0",
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/AgibotTech/Genie-Envisioner-V1"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/agibot-world/Genie-Envisioner-v1.0"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "gwm-1",
+      "name": "GWM-1",
+      "category": "Physical simulation",
+      "controls": "Camera poses, robot commands and audio across model variants",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://runway.com/research/introducing-runway-gwm-1"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "happy-oyster",
+      "name": "Happy Oyster",
+      "category": "Navigation",
+      "controls": "Text, voice, images and first-person exploration",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://www.happyoyster.cn/"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "fal",
+          "url": "https://fal.ai/happy-oyster",
+          "note": "Provider lists Happy Oyster; check the exact endpoint interaction mode and access."
+        },
+        {
+          "name": "Official",
+          "url": "https://www.happyoyster.cn/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "helixworld",
+      "name": "HelixWorld",
+      "category": "Navigation",
+      "controls": "Interactive world generation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/NoizAI/HelixWorld-preview",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/NoizAI/HelixWorld"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/NoizAI/HelixWorld-preview"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "hunyuan-gamecraft",
+      "name": "Hunyuan-GameCraft",
+      "category": "Games",
+      "controls": "Action-conditioned game video",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/tencent/Hunyuan-GameCraft-1.0",
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Tencent-Hunyuan/Hunyuan-GameCraft-1.0"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/tencent/Hunyuan-GameCraft-1.0"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "hunyuanworld-voyager",
+      "name": "HunyuanWorld-Voyager",
+      "category": "Navigation",
+      "controls": "Camera-conditioned world exploration",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/tencent/HunyuanWorld-Voyager",
+      "weightLicense": "other",
+      "commercial": "Custom terms",
+      "licenseNote": "The selected weights use custom or component-specific terms; consult the linked model card and license.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-Voyager"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/tencent/HunyuanWorld-Voyager"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "hy-worldplay",
+      "name": "HY-WorldPlay",
+      "category": "Navigation",
+      "controls": "Camera and movement controls",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/tencent/HY-WorldPlay",
+      "weightLicense": "other",
+      "commercial": "Custom terms",
+      "licenseNote": "The selected weights use custom or component-specific terms; consult the linked model card and license.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Tencent-Hunyuan/HY-WorldPlay"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/tencent/HY-WorldPlay"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "lingbot-world",
+      "name": "LingBot-World",
+      "category": "Navigation",
+      "controls": "Keyboard and camera controls",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/robbyant/lingbot-world-fast",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Robbyant/lingbot-world"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/robbyant/lingbot-world-fast"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Reactor",
+          "url": "https://www.reactor.inc/models/lingbot",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/lingbot",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "lingbot-world-v2",
+      "name": "LingBot-World v2",
+      "category": "Navigation",
+      "controls": "Interactive world navigation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/robbyant/lingbot-world-v2-1.3b-causal-fast",
+      "weightLicense": "cc-by-nc-sa-4.0",
+      "commercial": "Non-commercial",
+      "licenseNote": "The selected weight model card declares a non-commercial license.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Robbyant/lingbot-world-v2"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/robbyant/lingbot-world-v2-1.3b-causal-fast"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Reactor",
+          "url": "https://www.reactor.inc/models/lingbot-world-2",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "marble",
+      "name": "Marble",
+      "category": "Spatial worlds",
+      "controls": "Create, edit and explore persistent 3D worlds",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://marble.worldlabs.ai/"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official",
+          "url": "https://marble.worldlabs.ai/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "matrix-game-2-0",
+      "name": "Matrix-Game 2.0",
+      "category": "Games",
+      "controls": "Keyboard and mouse controls",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Skywork/Matrix-Game-2.0",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/SkyworkAI/Matrix-Game"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Skywork/Matrix-Game-2.0"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "matrix-game-3-5",
+      "name": "Matrix-Game 3.5",
+      "category": "Games",
+      "controls": "Interactive game controls",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/RiemannDynamics/Matrix-Game-3.5-Distilled",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Riemann-Dynamics/Matrix-Game-3.5"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/RiemannDynamics/Matrix-Game-3.5-Distilled"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "mineworld",
+      "name": "MineWorld",
+      "category": "Games",
+      "controls": "Minecraft action controls",
+      "weights": "Unverified",
+      "weightsUrl": null,
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/microsoft/MineWorld"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "minwm",
+      "name": "minWM",
+      "category": "Navigation",
+      "controls": "Interactive video world modeling",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/MIN-Lab/minWM",
+      "weightLicense": "mit",
+      "commercial": "Conflicting sources",
+      "licenseNote": "Weight metadata says MIT; the framework README assigns Hunyuan-derived checkpoints Tencent community terms. Review the exact checkpoint.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/shengshu-ai/minWM"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/MIN-Lab/minWM"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "neural-world-models",
+      "name": "Neural World Models",
+      "category": "Navigation",
+      "controls": "Navigation action conditioning",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/facebook/nwm",
+      "weightLicense": "cc-by-4.0",
+      "commercial": "Conflicting sources",
+      "licenseNote": "Weight metadata and the project README differ. The README specifies non-commercial terms.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/facebookresearch/nwm"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/facebook/nwm"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "oasis",
+      "name": "Oasis",
+      "category": "Games",
+      "controls": "Keyboard and mouse actions",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Etched/oasis-500m",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/etched-ai/open-oasis"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Etched/oasis-500m"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "oasis-3",
+      "name": "Oasis 3",
+      "category": "Driving",
+      "controls": "Steering, movement and API control signals",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://decart.ai/oasis"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official",
+          "url": "https://oasis3-preview.decart.ai",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "odyssey-2-pro",
+      "name": "Odyssey-2 Pro",
+      "category": "Navigation",
+      "controls": "Text-driven interactive video simulation",
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://odyssey.systems/the-gpt-2-moment-for-world-models"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official API portal",
+          "url": "https://developer.odyssey.ml",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "sana-wm",
+      "name": "SANA-WM",
+      "category": "Navigation",
+      "controls": "Streaming world generation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Efficient-Large-Model/SANA-WM_streaming",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/NVlabs/Sana"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Efficient-Large-Model/SANA-WM_streaming"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "streamltx",
+      "name": "StreamLTX",
+      "category": "Video interaction",
+      "controls": "Streaming video generation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/longxiaooo/StreamLTX",
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://huggingface.co/longxiaooo/StreamLTX"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "v-jepa-2",
+      "name": "V-JEPA 2",
+      "category": "Robotics",
+      "controls": "Latent action-conditioned prediction",
+      "weights": "Unverified",
+      "weightsUrl": null,
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/facebookresearch/vjepa2"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "vista",
+      "name": "Vista",
+      "category": "Driving",
+      "controls": "Driving trajectory conditioning",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/OpenDriveLab/Vista",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/OpenDriveLab/Vista"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/OpenDriveLab/Vista"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "waypoint-1-5",
+      "name": "Waypoint 1.5",
+      "category": "Navigation",
+      "controls": "Keyboard and mouse controls",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Overworld/Waypoint-1.5-1B",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://huggingface.co/Overworld/Waypoint-1.5-1B"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "wham",
+      "name": "WHAM",
+      "category": "Games",
+      "controls": "Controller actions and game video",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/microsoft/wham",
+      "weightLicense": "Microsoft Research License",
+      "commercial": "Custom terms",
+      "licenseNote": "The model card links the Microsoft Research License. Review its research-use terms.",
+      "realtime": "Not real-time",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://huggingface.co/microsoft/wham"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "worldplay2",
+      "name": "WorldPlay2",
+      "category": "Navigation",
+      "controls": "Interactive world navigation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/aejion/WorldPlay2-Fast",
+      "weightLicense": "cc-by-nc-4.0",
+      "commercial": "Non-commercial",
+      "licenseNote": "The selected weight model card declares a non-commercial license.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/WorldPlay2/WorldPlay2"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/aejion/WorldPlay2-Fast"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "yume",
+      "name": "YUME",
+      "category": "Navigation",
+      "controls": "Image-conditioned world exploration",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/stdstu123/Yume-5B-720P",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/stdstu12/YUME"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/stdstu123/Yume-5B-720P"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "zing",
+      "name": "Zing",
+      "category": "Games",
+      "controls": "Interactive game generation",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/seedleap/zing-0.5",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/seedleap/zing-world-model"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/seedleap/zing-0.5"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    }
+  ]
+}
