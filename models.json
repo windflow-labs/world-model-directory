@@ -67,7 +67,13 @@
           "url": "https://huggingface.co/acvlab/ABot-World-0-5B-LF"
         }
       ],
-      "tryAt": [],
+      "tryAt": [
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/abot-world-0-5b",
+          "note": "Model page verified; access and live capacity must be checked with the provider."
+        }
+      ],
       "checkedAt": "2026-10-23"
     },
     {
@@ -188,7 +194,13 @@
           "url": "https://huggingface.co/GD-ML/DreamX-World-5B"
         }
       ],
-      "tryAt": [],
+      "tryAt": [
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/dreamx-world-5b",
+          "note": "Model page verified; access and live capacity must be checked with the provider."
+        }
+      ],
       "checkedAt": "2026-10-23"
     },
     {
@@ -537,11 +549,6 @@
           "name": "Reactor",
           "url": "https://www.reactor.inc/models/lingbot",
           "note": "Listed destination; access, version and live capacity must be checked with the provider."
-        },
-        {
-          "name": "Windflow",
-          "url": "https://windflow.online/models/lingbot",
-          "note": "Listed destination; access, version and live capacity must be checked with the provider."
         }
       ],
       "checkedAt": "2026-10-23"
@@ -573,6 +580,11 @@
           "name": "Reactor",
           "url": "https://www.reactor.inc/models/lingbot-world-2",
           "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/lingbot",
+          "note": "Model page verified; access and live capacity must be checked with the provider."
         }
       ],
       "checkedAt": "2026-10-23"
