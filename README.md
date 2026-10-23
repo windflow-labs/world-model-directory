@@ -1,6 +1,8 @@
 # World Model Directory
 
-A source-linked directory of world models maintained by Windflow. The first snapshot contains 40 entries spanning interactive video, navigation, games, driving, robotics and spatial worlds. Entries and providers are alphabetical, with no scores, sponsored placement or preferred hosting provider.
+A source-linked directory of world models maintained by Windflow. The directory contains 51 entries spanning interactive video, navigation, games, driving, robotics and spatial worlds. Entries and providers are alphabetical, with no scores, sponsored placement or preferred hosting provider.
+
+An entry needs at least one way to run or try the model: published weights, a public demo or a public API. Research announcements with none of these stay out until one exists, and withdrawn or empty weight repositories do not count.
 
 - `models.json`: the editable dataset.
 - `schema.json`: JSON Schema (2020-12) describing the data contract.

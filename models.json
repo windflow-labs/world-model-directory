@@ -23,8 +23,15 @@
     {
       "id": "1x-world-model",
       "name": "1X World Model",
+      "organization": "1X Technologies",
+      "released": "2024-06",
       "category": "Robotics",
+      "summary": "Models and data from the 1X World Model Challenge, which asks a model to predict the first-person camera view of 1X's EVE humanoid robot from its past frames and actions. The release includes small Genie-style baselines and a tokenizer; it is a research benchmark rather than an interactive app.",
       "controls": "Robot action and video modeling",
+      "controlsDetail": [
+        "Past camera frames from the robot",
+        "The robot's action data for each step"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/1x-technologies/GENIE_138M",
       "weightLicense": "apache-2.0",
@@ -48,14 +55,23 @@
     {
       "id": "abot-world",
       "name": "ABot-World",
+      "organization": "AMAP CV Lab, Alibaba",
+      "released": "2026-07",
       "category": "Navigation",
+      "summary": "ABot-World turns a starting image into a world you move through with action inputs, generated frame by frame with no fixed end. Its authors target desktop hardware rather than data-center clusters, and the weights are Apache-2.0.",
       "controls": "Image and action-conditioned generation",
+      "controlsDetail": [
+        "A starting image",
+        "A text prompt",
+        "Movement and camera actions during the rollout"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/acvlab/ABot-World-0-5B-LF",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "720p at 16 fps with 1.2 s latency.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -69,9 +85,49 @@
       ],
       "tryAt": [
         {
+          "name": "fal",
+          "url": "https://fal.ai/models/alibaba/abot-world-0",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
           "name": "Windflow",
           "url": "https://windflow.online/models/abot-world-0-5b",
-          "note": "Model page verified; access and live capacity must be checked with the provider."
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "agora",
+      "name": "Agora (Odyssey)",
+      "organization": "Odyssey",
+      "released": "2026-05-18",
+      "category": "Games",
+      "summary": "Agora is Odyssey's multiplayer world model: up to four players act in the same generated world, and the model renders what each of them sees. The first public demo was a GoldenEye-style deathmatch; a newer version is playable on Odyssey's site.",
+      "controls": "Up to four players act in one shared generated world",
+      "controlsDetail": [
+        "Each player's movement and actions",
+        "One shared world for up to four players"
+      ],
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "realtimeDetail": "Real time for every player; no frame rate published.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://odyssey.systems/introducing-agora-1"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official",
+          "url": "https://agora.odyssey.systems/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
         }
       ],
       "checkedAt": "2026-10-23"
@@ -79,14 +135,23 @@
     {
       "id": "alayaworld",
       "name": "AlayaWorld",
+      "organization": "Alaya Lab",
+      "released": "2026-07",
       "category": "Navigation",
+      "summary": "AlayaWorld is an open framework for playable generated worlds that ships pipelines, reference code and evaluation tools alongside its weights. Its authors demonstrate navigation plus actions such as combat and spell casting.",
       "controls": "Interactive world generation",
+      "controlsDetail": [
+        "Keyboard input",
+        "Mouse input",
+        "A text prompt"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/AlayaLab/AlayaWorld",
-      "weightLicense": "other",
+      "weightLicense": "LTX-2 Community License",
       "commercial": "Custom terms",
       "licenseNote": "The model card specifies the LTX-2 Community License, including a revenue-based commercial licensing condition.",
-      "realtime": "Unverified",
+      "realtime": "Author claim",
+      "realtimeDetail": "Real-time navigation and actions; no frame rate published.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -96,6 +161,47 @@
         {
           "label": "Weights and model card",
           "url": "https://huggingface.co/AlayaLab/AlayaWorld"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.06291"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "comma-worldmodel-4b",
+      "name": "comma.ai world model 4B",
+      "organization": "comma.ai",
+      "released": "2026-09-01",
+      "category": "Driving",
+      "summary": "comma.ai's 4B driving world model predicts what the car's two cameras will see next, together with a driving plan, from recent frames and the car's own motion. comma uses it as a simulator to train openpilot driving policies with reinforcement learning; the weights are MIT.",
+      "controls": "Frame history, ego motion and future plan anchors",
+      "controlsDetail": [
+        "Recent camera frames",
+        "The car's ego motion",
+        "Future anchors for the driving plan"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/commaai/worldmodel-4B",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/commaai/worldmodel-4B"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2504.19077"
+        },
+        {
+          "label": "comma.ai blog",
+          "url": "https://blog.comma.ai/mlsim/"
         }
       ],
       "tryAt": [],
@@ -104,13 +210,21 @@
     {
       "id": "cosmos-predict2-5",
       "name": "Cosmos Predict2.5",
+      "organization": "NVIDIA",
+      "released": "2025-09",
       "category": "Physical simulation",
+      "summary": "Cosmos-Predict2.5 is NVIDIA's world foundation model for physical AI: it continues or generates video from text, an image or a clip. An action-conditioned variant predicts what a robot will see after an action, which makes it a simulator for policy work rather than a game engine.",
       "controls": "Text, image and video conditioning",
+      "controlsDetail": [
+        "A text prompt",
+        "A starting image or video",
+        "Robot actions (action-conditioned variant)"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/nvidia/Cosmos-Predict2.5-2B",
-      "weightLicense": "other",
+      "weightLicense": "NVIDIA Open Model License",
       "commercial": "Custom terms",
-      "licenseNote": "The selected weights use custom or component-specific terms; consult the linked model card and license.",
+      "licenseNote": "It states that the models are commercially usable, with conditions: keep NVIDIA's license notice when you distribute the model, credit \"Built on NVIDIA Cosmos\", and do not bypass its safety guardrails.",
       "realtime": "Unverified",
       "measurement": "Not independently measured for this directory",
       "sources": [
@@ -129,19 +243,30 @@
     {
       "id": "ctrl-world",
       "name": "Ctrl-World",
+      "organization": "Stanford University and Tsinghua University",
+      "released": "2025-10",
       "category": "Robotics",
-      "controls": "Robot manipulation actions",
-      "weights": "Unverified",
-      "weightsUrl": null,
-      "weightLicense": "Unverified",
-      "commercial": "Unverified",
-      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "summary": "Ctrl-World is an action-conditioned world model for robot manipulation, trained on the DROID dataset. Its authors roll a vision-language-action policy forward entirely in imagination, so the policy can be evaluated or improved without a physical robot.",
+      "controls": "Keyboard commands converted into robot action chunks",
+      "controlsDetail": [
+        "Keyboard commands converted into robot action chunks",
+        "Actions proposed by a robot policy"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/yjguo/Ctrl-World",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The model card declares MIT. Ctrl-World is fine-tuned from Stable Video Diffusion, whose own license also applies to the base weights it needs.",
       "realtime": "Unverified",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
           "label": "Project source",
-          "url": "https://ctrl-world.github.io/"
+          "url": "https://github.com/Robert-gyj/Ctrl-World"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/yjguo/Ctrl-World"
         }
       ],
       "tryAt": [],
@@ -175,14 +300,23 @@
     {
       "id": "dreamx-world",
       "name": "DreamX-World",
+      "organization": "AMAP, Alibaba",
+      "released": "2026-05",
       "category": "Navigation",
-      "controls": "Action-conditioned world generation",
+      "summary": "DreamX-World is a general-purpose interactive world model that keeps generating a scene over long autoregressive rollouts with precise camera control. The project README lists offline generation times; it does not claim real-time output.",
+      "controls": "Camera control over long autoregressive rollouts",
+      "controlsDetail": [
+        "A starting image",
+        "Camera control over long rollouts",
+        "A text prompt"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/GD-ML/DreamX-World-5B",
       "weightLicense": "mit",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Unverified",
+      "realtimeDetail": "The README lists offline timings (about 26 s to generate 5 s at 720p).",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -198,7 +332,7 @@
         {
           "name": "Windflow",
           "url": "https://windflow.online/models/dreamx-world-5b",
-          "note": "Model page verified; access and live capacity must be checked with the provider."
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
         }
       ],
       "checkedAt": "2026-10-23"
@@ -206,14 +340,23 @@
     {
       "id": "edenlive",
       "name": "EdenLive",
+      "organization": "VAST",
+      "released": "2026-10-12",
       "category": "Video interaction",
-      "controls": "Live video and scene prompts",
+      "summary": "EdenLive is a generative renderer: you feed it a rough source video, such as game footage or a live camera, plus a scene prompt and a reference image, and it re-renders each chunk as a new world while keeping the source motion. Movement comes from the source video, not from direct keyboard commands.",
+      "controls": "Source video (game footage or a live camera), a scene prompt and a reference image",
+      "controlsDetail": [
+        "A source video: game footage or a live camera",
+        "A scene prompt",
+        "A reference image for appearance"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/VAST-AI/EdenLive",
-      "weightLicense": "other",
+      "weightLicense": "Mixed component licenses",
       "commercial": "Custom terms",
-      "licenseNote": "Mixed component licenses. The optional FLUX first-frame workbench is non-commercial; the video pipeline has separate component terms.",
+      "licenseNote": "The video pipeline's weights are Apache-2.0, with an MIT CLIP encoder and a vision encoder under Meta's DINOv3 License. The optional first-frame workbench uses FLUX.2 [klein] under a non-commercial license.",
       "realtime": "Author claim",
+      "realtimeDetail": "24 fps or higher at 480p or 720p, minute-scale generation.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -240,100 +383,25 @@
       "checkedAt": "2026-10-23"
     },
     {
-      "id": "gamefactory",
-      "name": "GameFactory",
-      "category": "Games",
-      "controls": "Action-conditioned game video",
-      "weights": "Unverified",
-      "weightsUrl": null,
-      "weightLicense": "Unverified",
-      "commercial": "Unverified",
-      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
-      "realtime": "Unverified",
-      "measurement": "Not independently measured for this directory",
-      "sources": [
-        {
-          "label": "Project source",
-          "url": "https://github.com/KlingAIResearch/GameFactory"
-        }
-      ],
-      "tryAt": [],
-      "checkedAt": "2026-10-23"
-    },
-    {
-      "id": "gamegen-x",
-      "name": "GameGen-X",
-      "category": "Games",
-      "controls": "Interactive game video generation",
-      "weights": "Unverified",
-      "weightsUrl": null,
-      "weightLicense": "Unverified",
-      "commercial": "Unverified",
-      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
-      "realtime": "Unverified",
-      "measurement": "Not independently measured for this directory",
-      "sources": [
-        {
-          "label": "Project source",
-          "url": "https://github.com/GameGen-X/GameGen-X"
-        }
-      ],
-      "tryAt": [],
-      "checkedAt": "2026-10-23"
-    },
-    {
-      "id": "genie",
-      "name": "Genie",
-      "category": "Games",
-      "controls": "Latent actions in generated environments",
-      "weights": "Not published in cited source",
-      "weightsUrl": null,
-      "weightLicense": "No public weight license verified",
-      "commercial": "Service terms",
-      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
-      "realtime": "Unverified",
-      "measurement": "Not independently measured for this directory",
-      "sources": [
-        {
-          "label": "Official source",
-          "url": "https://arxiv.org/abs/2402.15391"
-        }
-      ],
-      "tryAt": [],
-      "checkedAt": "2026-10-23"
-    },
-    {
-      "id": "genie-2",
-      "name": "Genie 2",
-      "category": "Navigation",
-      "controls": "Keyboard and mouse navigation",
-      "weights": "Not published in cited source",
-      "weightsUrl": null,
-      "weightLicense": "No public weight license verified",
-      "commercial": "Service terms",
-      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
-      "realtime": "Unverified",
-      "measurement": "Not independently measured for this directory",
-      "sources": [
-        {
-          "label": "Official source",
-          "url": "https://deepmind.google/blog/genie-2-a-large-scale-foundation-world-model/"
-        }
-      ],
-      "tryAt": [],
-      "checkedAt": "2026-10-23"
-    },
-    {
       "id": "genie-3",
       "name": "Genie 3",
+      "organization": "Google DeepMind",
+      "released": "2025-08-05",
       "category": "Navigation",
+      "summary": "Genie 3 generates a world from a text prompt and lets you move through it while it renders, with prompts that can change the world mid-session. It is available only as Project Genie, an experimental prototype in Google Labs; there are no weights or public API.",
       "controls": "Prompted worlds and live navigation",
+      "controlsDetail": [
+        "A text prompt that creates the world",
+        "Navigation while the world renders",
+        "Text events that change the world"
+      ],
       "weights": "Not published in cited source",
       "weightsUrl": null,
       "weightLicense": "No public weight license verified",
       "commercial": "Service terms",
       "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
       "realtime": "Author claim",
+      "realtimeDetail": "720p at 20 to 24 fps.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -341,7 +409,13 @@
           "url": "https://deepmind.google/models/genie/"
         }
       ],
-      "tryAt": [],
+      "tryAt": [
+        {
+          "name": "Project Genie",
+          "url": "https://labs.google/projectgenie",
+          "note": "Google Labs prototype; access is limited by Google."
+        }
+      ],
       "checkedAt": "2026-10-23"
     },
     {
@@ -370,37 +444,23 @@
       "checkedAt": "2026-10-23"
     },
     {
-      "id": "gwm-1",
-      "name": "GWM-1",
-      "category": "Physical simulation",
-      "controls": "Camera poses, robot commands and audio across model variants",
-      "weights": "Not published in cited source",
-      "weightsUrl": null,
-      "weightLicense": "No public weight license verified",
-      "commercial": "Service terms",
-      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
-      "realtime": "Author claim",
-      "measurement": "Not independently measured for this directory",
-      "sources": [
-        {
-          "label": "Official source",
-          "url": "https://runway.com/research/introducing-runway-gwm-1"
-        }
-      ],
-      "tryAt": [],
-      "checkedAt": "2026-10-23"
-    },
-    {
       "id": "happy-oyster",
       "name": "Happy Oyster",
+      "organization": "Alibaba Cloud Model Studio",
       "category": "Navigation",
+      "summary": "Happy Oyster builds a world from a paragraph of text in about half a minute, then streams it with sound in real time. Adventure mode lets you walk the world in first person; Directing mode lets you steer the story with text, voice or images.",
       "controls": "Text, voice, images and first-person exploration",
+      "controlsDetail": [
+        "First-person movement and look (Adventure mode)",
+        "Text, voice or image direction (Directing mode)"
+      ],
       "weights": "Not published in cited source",
       "weightsUrl": null,
       "weightLicense": "No public weight license verified",
       "commercial": "Service terms",
       "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
       "realtime": "Author claim",
+      "realtimeDetail": "Real-time audio and video once the world is built.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -412,11 +472,70 @@
         {
           "name": "fal",
           "url": "https://fal.ai/happy-oyster",
-          "note": "Provider lists Happy Oyster; check the exact endpoint interaction mode and access."
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
         },
         {
           "name": "Official",
           "url": "https://www.happyoyster.cn/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
+          "name": "Reactor",
+          "url": "https://www.reactor.inc/models/happy-oyster",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "helios",
+      "name": "Helios",
+      "organization": "PKU-YuanGroup",
+      "released": "2026-03",
+      "category": "Video interaction",
+      "summary": "Helios is a 14B long-video model that streams minute-scale video in real time while you change the prompt. Its authors reach real time without the usual shortcuts such as KV caches, sparse attention or quantization, and the weights are Apache-2.0.",
+      "controls": "Text prompts that can change while the video streams",
+      "controlsDetail": [
+        "A text prompt",
+        "Prompt changes while the video streams",
+        "An optional starting image"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/BestWishYsh/Helios-Distilled",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "realtimeDetail": "Minute-scale video at 19.5 fps end to end.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/PKU-YuanGroup/Helios"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/BestWishYsh/Helios-Distilled"
+        },
+        {
+          "label": "Project page",
+          "url": "https://pku-yuangroup.github.io/Helios-Page"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Hugging Face Space",
+          "url": "https://huggingface.co/spaces/BestWishYsh/Helios-14B-RealTime-AOTI",
+          "note": "Demo Space linked from the official repository."
+        },
+        {
+          "name": "Reactor",
+          "url": "https://www.reactor.inc/models/helios",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/helios",
           "note": "Listed destination; access, version and live capacity must be checked with the provider."
         }
       ],
@@ -425,14 +544,22 @@
     {
       "id": "helixworld",
       "name": "HelixWorld",
+      "organization": "Noiz AI",
+      "released": "2026-09",
       "category": "Navigation",
-      "controls": "Interactive world generation",
+      "summary": "HelixWorld generates video and spatial stereo sound together, so turning the camera also moves where sounds come from. Movement and camera keys drive the world, and its authors report faster-than-real-time generation including decoding.",
+      "controls": "Movement and camera keys, with generated spatial stereo audio",
+      "controlsDetail": [
+        "Movement keys",
+        "Camera keys (continuous 6-DoF camera pose)"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/NoizAI/HelixWorld-preview",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "Real-time factor 0.77 at 768×512 and 24 fps, including audio and video decoding.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -450,14 +577,23 @@
     {
       "id": "hunyuan-gamecraft",
       "name": "Hunyuan-GameCraft",
+      "organization": "Tencent Hunyuan",
+      "released": "2025-08-14",
       "category": "Games",
-      "controls": "Action-conditioned game video",
+      "summary": "Hunyuan-GameCraft generates game-like video from a reference image, a prompt and keyboard or mouse input, which it maps into a shared camera space so moves blend smoothly. A distilled variant is aimed at real-time use.",
+      "controls": "Keyboard and mouse input mapped into a shared camera space",
+      "controlsDetail": [
+        "A reference image and prompt",
+        "Keyboard movement (W, A, S, D)",
+        "Mouse look"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/tencent/Hunyuan-GameCraft-1.0",
-      "weightLicense": "Unverified",
-      "commercial": "Unverified",
-      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
-      "realtime": "Unverified",
+      "weightLicense": "Tencent Hunyuan Community License",
+      "commercial": "Custom terms",
+      "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 100 million monthly active users need a separate license from Tencent.",
+      "realtime": "Author claim",
+      "realtimeDetail": "A distilled version is described as suitable for real-time deployment; no frame rate in the README.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -473,16 +609,62 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "hunyuanworld-1",
+      "name": "HunyuanWorld 1.0",
+      "organization": "Tencent Hunyuan",
+      "released": "2025-07-27",
+      "category": "Spatial worlds",
+      "summary": "HunyuanWorld 1.0 generates a 360° explorable 3D world from text or an image: it builds a panorama, splits it into semantic layers and reconstructs them in 3D. A quantized Lite version targets consumer graphics cards.",
+      "controls": "Text or an image, turned into a 360° 3D scene",
+      "controlsDetail": [
+        "A text prompt or an image",
+        "Free exploration of the reconstructed 3D world"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/tencent/HunyuanWorld-1",
+      "weightLicense": "Tencent HunyuanWorld-1.0 Community License",
+      "commercial": "Custom terms",
+      "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 1 million monthly active users need a separate license from Tencent.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Tencent-Hunyuan/HunyuanWorld-1.0"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/tencent/HunyuanWorld-1"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official",
+          "url": "https://3d.hunyuan.tencent.com/sceneTo3D",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "hunyuanworld-voyager",
       "name": "HunyuanWorld-Voyager",
+      "organization": "Tencent Hunyuan",
+      "released": "2025-09-02",
       "category": "Navigation",
+      "summary": "Voyager generates explorable scenes as RGB-D video that follows a camera path you define, keeping the geometry consistent enough to reconstruct in 3D. It renders offline rather than responding live.",
       "controls": "Camera-conditioned world exploration",
+      "controlsDetail": [
+        "A starting image",
+        "A custom camera trajectory"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/tencent/HunyuanWorld-Voyager",
-      "weightLicense": "other",
+      "weightLicense": "Tencent HunyuanWorld-Voyager Community License",
       "commercial": "Custom terms",
-      "licenseNote": "The selected weights use custom or component-specific terms; consult the linked model card and license.",
+      "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea.",
       "realtime": "Unverified",
+      "realtimeDetail": "The README reports offline generation times.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -498,16 +680,104 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "hy-nomas",
+      "name": "Hy-Nomas",
+      "organization": "Tencent Hunyuan",
+      "released": "2026-10-21",
+      "category": "Navigation",
+      "summary": "Hy-Nomas generates a world one video segment at a time and takes free-form direction between segments: add objects, change the style or scene, describe actions or move the camera. A persistent cache keeps the world consistent across turns, and the weights are Apache-2.0.",
+      "controls": "Free-form text instructions and camera control, segment by segment",
+      "controlsDetail": [
+        "Free-form text instructions for each segment",
+        "Camera trajectories",
+        "Multi-turn changes: new objects, styles, scenes or actions"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/tencent/Hy-Nomas",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "realtimeDetail": "Outputs 720×1280 at 24 fps from an 8-step distilled model.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Tencent-Hunyuan/Hy-Nomas"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/tencent/Hy-Nomas"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official demo",
+          "url": "https://hy-nomas.hy.tencent.com/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "hy-world-2",
+      "name": "HY-World 2.0",
+      "organization": "Tencent Hunyuan",
+      "released": "2026-04-16",
+      "category": "Spatial worlds",
+      "summary": "HY-World 2.0 is Tencent's multi-modal world model for reconstructing, generating and simulating 3D worlds. It is released in parts, including panorama generation, multi-view reconstruction and stereo world generation, each with its own weights.",
+      "controls": "Text, images or video, turned into a navigable 3D world",
+      "controlsDetail": [
+        "Text or images to generate a world",
+        "Photos or video to reconstruct a real place",
+        "Navigation through the resulting 3D world"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/tencent/HY-World-2.0",
+      "weightLicense": "Tencent HY-World 2.0 Community License",
+      "commercial": "Custom terms",
+      "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 1 million monthly active users need a separate license from Tencent.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Tencent-Hunyuan/HY-World-2.0"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/tencent/HY-World-2.0"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official",
+          "url": "https://3d.hunyuan.tencent.com/sceneTo3D",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "hy-worldplay",
       "name": "HY-WorldPlay",
+      "organization": "Tencent Hunyuan",
+      "released": "2025-12-17",
       "category": "Navigation",
-      "controls": "Camera and movement controls",
+      "summary": "HY-World 1.5 (WorldPlay) is Tencent's streaming world model: it turns keyboard and mouse input into camera movement in real time and keeps the scene geometrically consistent when you return to a place.",
+      "controls": "Keyboard and mouse, or a camera trajectory",
+      "controlsDetail": [
+        "Keyboard and mouse",
+        "A camera trajectory",
+        "A starting image or text prompt"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/tencent/HY-WorldPlay",
-      "weightLicense": "other",
+      "weightLicense": "Tencent HY-WorldPlay Community License",
       "commercial": "Custom terms",
-      "licenseNote": "The selected weights use custom or component-specific terms; consult the linked model card and license.",
+      "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 1 million monthly active users need a separate license from Tencent.",
       "realtime": "Author claim",
+      "realtimeDetail": "Real-time latency with streaming generation.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -525,14 +795,23 @@
     {
       "id": "lingbot-world",
       "name": "LingBot-World",
+      "organization": "Robbyant (Ant Group)",
+      "released": "2026-01",
       "category": "Navigation",
+      "summary": "LingBot-World is Robbyant's open world simulator built on a video generation model. You give it an image and steer with camera poses or action strings; its distilled Fast variant answers in under a second, and the weights are Apache-2.0.",
       "controls": "Keyboard and camera controls",
+      "controlsDetail": [
+        "A starting image",
+        "Camera poses",
+        "Action strings (Act preview)"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/robbyant/lingbot-world-fast",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "Under 1 s latency while producing 16 fps at 480p or 720p.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -555,15 +834,24 @@
     },
     {
       "id": "lingbot-world-v2",
-      "name": "LingBot-World v2",
+      "name": "LingBot-World 2.0",
+      "organization": "Robbyant (Ant Group)",
+      "released": "2026-07",
       "category": "Navigation",
+      "summary": "LingBot-World 2.0 extends Robbyant's world model to longer rollouts and richer interactions, in 1.3B and 14B sizes. Its weights are licensed for non-commercial use only (CC BY-NC-SA 4.0); check the license before building on a hosted version.",
       "controls": "Interactive world navigation",
+      "controlsDetail": [
+        "A starting image",
+        "Camera poses (4×4 pose control)",
+        "Movement and interaction inputs"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/robbyant/lingbot-world-v2-1.3b-causal-fast",
       "weightLicense": "cc-by-nc-sa-4.0",
       "commercial": "Non-commercial",
-      "licenseNote": "The selected weight model card declares a non-commercial license.",
+      "licenseNote": "CC BY-NC-SA 4.0 allows non-commercial use only, and anything built from the weights must carry the same license.",
       "realtime": "Author claim",
+      "realtimeDetail": "A distilled real-time variant drives 720p streams at 60 fps.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -577,6 +865,16 @@
       ],
       "tryAt": [
         {
+          "name": "fal",
+          "url": "https://fal.ai/models/robbyant/lingbot-world-2",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
+          "name": "LingGuang",
+          "url": "https://www.lingguang.com/",
+          "note": "Named in the project README as a place to try the real-time version."
+        },
+        {
           "name": "Reactor",
           "url": "https://www.reactor.inc/models/lingbot-world-2",
           "note": "Listed destination; access, version and live capacity must be checked with the provider."
@@ -584,7 +882,52 @@
         {
           "name": "Windflow",
           "url": "https://windflow.online/models/lingbot",
-          "note": "Model page verified; access and live capacity must be checked with the provider."
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "longlive-2",
+      "name": "LongLive 2.0",
+      "organization": "NVIDIA (NVlabs)",
+      "released": "2026-05-13",
+      "category": "Video interaction",
+      "summary": "LongLive 2.0 generates long, multi-shot video in real time from text prompts you can switch as it plays. The release includes training and inference infrastructure; the 5B weights use the NVIDIA Open Model License.",
+      "controls": "Text prompts switched during generation, across multiple shots",
+      "controlsDetail": [
+        "A text storyboard prompt",
+        "Prompt switches while the video plays",
+        "Multi-shot sequences"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B",
+      "weightLicense": "NVIDIA Open Model License",
+      "commercial": "Custom terms",
+      "licenseNote": "It states that the models are commercially usable, with conditions: keep NVIDIA's license notice when you distribute the model and do not bypass its safety guardrails. The code is Apache-2.0.",
+      "realtime": "Author claim",
+      "realtimeDetail": "45.7 fps of diffusion time, excluding video decoding; the paper reports end-to-end times separately.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/NVlabs/LongLive"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Efficient-Large-Model/LongLive-2.0-5B"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Reactor",
+          "url": "https://www.reactor.inc/models/longlive-v2",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        },
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/longlive-2",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
         }
       ],
       "checkedAt": "2026-10-23"
@@ -592,8 +935,15 @@
     {
       "id": "marble",
       "name": "Marble",
+      "organization": "World Labs",
       "category": "Spatial worlds",
+      "summary": "Marble creates persistent 3D worlds from text or images that you can edit, walk through and export as Gaussian splats or meshes. It builds a 3D scene rather than streaming generated video; export and commercial rights depend on the paid plan.",
       "controls": "Create, edit and explore persistent 3D worlds",
+      "controlsDetail": [
+        "Text or image prompts",
+        "In-browser editing",
+        "Free camera exploration of the finished world"
+      ],
       "weights": "Not published in cited source",
       "weightsUrl": null,
       "weightLicense": "No public weight license verified",
@@ -617,16 +967,58 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "matrix-3d",
+      "name": "Matrix-3D",
+      "organization": "Skywork AI",
+      "released": "2025-08",
+      "category": "Spatial worlds",
+      "summary": "Matrix-3D turns a single image or a text prompt into an explorable 3D scene: it generates a panoramic video along a camera path, then reconstructs the scene in 3D. Two reconstruction modes trade speed for detail, and the weights are MIT.",
+      "controls": "An image or text prompt, then a camera path for the panoramic video",
+      "controlsDetail": [
+        "A single image or a text prompt",
+        "A camera trajectory for the panoramic video",
+        "Fast or detailed 3D reconstruction"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Skywork/Matrix-3D",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The model card declares MIT. Downloads require accepting the card's terms on Hugging Face.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/SkyworkAI/Matrix-3D"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Skywork/Matrix-3D"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "matrix-game-2-0",
       "name": "Matrix-Game 2.0",
+      "organization": "Skywork AI",
+      "released": "2025-08-12",
       "category": "Games",
+      "summary": "Matrix-Game 2.0 is Skywork's open world model for long interactive video: it continues a scene frame by frame from keyboard and mouse input. Weights and code are MIT-licensed.",
       "controls": "Keyboard and mouse controls",
+      "controlsDetail": [
+        "A starting image",
+        "Keyboard movement",
+        "Mouse look"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/Skywork/Matrix-Game-2.0",
       "weightLicense": "mit",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "25 fps.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -642,16 +1034,59 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "matrix-game-3-0",
+      "name": "Matrix-Game 3.0",
+      "organization": "Skywork AI",
+      "released": "2026-03-27",
+      "category": "Games",
+      "summary": "Matrix-Game 3.0 adds long-horizon memory so a world stays consistent when you revisit it, at 720p. Its authors reach real time through distillation, quantization and a distilled video decoder.",
+      "controls": "Keyboard and mouse, with long-horizon memory",
+      "controlsDetail": [
+        "A starting image",
+        "Keyboard and mouse"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Skywork/Matrix-Game-3.0",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Author claim",
+      "realtimeDetail": "40 fps at 720p with distillation and quantization.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/SkyworkAI/Matrix-Game"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Skywork/Matrix-Game-3.0"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "matrix-game-3-5",
       "name": "Matrix-Game 3.5",
+      "organization": "Riemann Dynamics",
+      "released": "2026-07-15",
       "category": "Games",
-      "controls": "Interactive game controls",
+      "summary": "Matrix-Game 3.5 adds patch memory to keep long 720p rollouts consistent, in first-person and third-person views. You drive it with an anchor image, a camera trajectory and a text prompt.",
+      "controls": "Camera trajectory and text, first- or third-person",
+      "controlsDetail": [
+        "An anchor image",
+        "A camera trajectory",
+        "A text prompt",
+        "First- or third-person mode"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/RiemannDynamics/Matrix-Game-3.5-Distilled",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "20 fps at 720p, from the paper.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -667,21 +1102,73 @@
       "checkedAt": "2026-10-23"
     },
     {
-      "id": "mineworld",
-      "name": "MineWorld",
+      "id": "matrix-game-4-0",
+      "name": "Matrix-Game 4.0",
+      "organization": "Skywork AI",
+      "released": "2026-10",
       "category": "Games",
-      "controls": "Minecraft action controls",
-      "weights": "Unverified",
-      "weightsUrl": null,
-      "weightLicense": "Unverified",
-      "commercial": "Unverified",
-      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "summary": "Matrix-Game 4.0 is a neural renderer for three specific games: a medieval castle, ancient Egypt and a racing track, with one checkpoint per scene. You play with keyboard and mouse while the model draws every frame.",
+      "controls": "Keyboard and mouse inside three released game scenes",
+      "controlsDetail": [
+        "Keyboard and mouse",
+        "Scene choice: castle, Egypt or racing"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Skywork/Matrix-Game-4.0",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption. Each released checkpoint covers one game scene.",
       "realtime": "Author claim",
+      "realtimeDetail": "Up to 67 fps at 864×480 in steady state, excluding video I/O.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
           "label": "Project source",
-          "url": "https://github.com/microsoft/MineWorld"
+          "url": "https://github.com/SkyworkAI/Matrix-Game"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Skywork/Matrix-Game-4.0"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Windflow",
+          "url": "https://windflow.online/models/matrix-game-4",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "memorizon",
+      "name": "Memorizon",
+      "organization": "MBZUAI (Institute of Foundation Models)",
+      "released": "2026-10",
+      "category": "Navigation",
+      "summary": "Memorizon trains a world model to remember beyond its context window, so long camera-driven videos stay consistent. You give it one image and steer with keyboard actions or a pose trajectory; it is built on Wan2.2-TI2V-5B and released under Apache-2.0.",
+      "controls": "One image plus keyboard actions or a camera pose trajectory",
+      "controlsDetail": [
+        "A starting image",
+        "Keyboard actions",
+        "A camera pose trajectory"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Luffuly/memorizon-1280x704-4step",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "realtimeDetail": "1280×704 at 16 fps, generated one second at a time by a 4-step distilled model.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/TingtingLiao/memorizon"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Luffuly/memorizon-1280x704-4step"
         }
       ],
       "tryAt": [],
@@ -713,15 +1200,57 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "mirage-2",
+      "name": "Mirage 2",
+      "organization": "Dynamics Lab",
+      "released": "2025-08-21",
+      "category": "Navigation",
+      "summary": "Mirage 2 turns an uploaded image into a world you can explore while it is generated. It is offered as a browser demo; no weights or API are listed.",
+      "controls": "Turn an image into a world explored in real time",
+      "controlsDetail": [
+        "An uploaded image as the starting world",
+        "Exploration while the world renders"
+      ],
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "realtimeDetail": "Real-time generation; no figures published.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://www.mirage2.org/about"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official demo",
+          "url": "https://demo.dynamicslab.ai/chaos",
+          "note": "Linked from the official page; it did not load from our review location."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "neural-world-models",
       "name": "Neural World Models",
+      "organization": "Meta (FAIR)",
+      "released": "2024-12",
       "category": "Navigation",
+      "summary": "Navigation World Models predict what a robot's camera will see after a navigation action, and can plan a route by imagining trajectories before taking them. Code and weights are for non-commercial use.",
       "controls": "Navigation action conditioning",
+      "controlsDetail": [
+        "Past camera frames",
+        "Navigation actions"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/facebook/nwm",
-      "weightLicense": "cc-by-4.0",
-      "commercial": "Conflicting sources",
-      "licenseNote": "Weight metadata and the project README differ. The README specifies non-commercial terms.",
+      "weightLicense": "CC BY-NC 4.0 (per README)",
+      "commercial": "Non-commercial",
+      "licenseNote": "Hugging Face metadata says CC BY 4.0, but the project README licenses code and weights under CC BY-NC 4.0. The stricter, non-commercial reading is shown.",
       "realtime": "Unverified",
       "measurement": "Not independently measured for this directory",
       "sources": [
@@ -740,14 +1269,23 @@
     {
       "id": "oasis",
       "name": "Oasis",
+      "organization": "Decart and Etched",
+      "released": "2024-10-31",
       "category": "Games",
+      "summary": "Oasis is a Minecraft-style game world drawn frame by frame from keyboard and mouse input. The open release is a downscaled 500M-parameter model with MIT-licensed weights; Decart's browser demo runs the larger model.",
       "controls": "Keyboard and mouse actions",
+      "controlsDetail": [
+        "A starting frame",
+        "Keyboard input",
+        "Mouse look"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/Etched/oasis-500m",
       "weightLicense": "mit",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "The hosted demo runs in real time; the 500M release is a downscaled version.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -759,20 +1297,34 @@
           "url": "https://huggingface.co/Etched/oasis-500m"
         }
       ],
-      "tryAt": [],
+      "tryAt": [
+        {
+          "name": "Official demo",
+          "url": "https://oasis.decart.ai/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
       "checkedAt": "2026-10-23"
     },
     {
       "id": "oasis-3",
       "name": "Oasis 3",
+      "organization": "Decart",
       "category": "Driving",
+      "summary": "Oasis 3 is Decart's world model for physical AI, starting with driving: an agent's steering and movement commands go in, and synchronized multi-camera views of the road come back in real time. It is offered through a preview site and an API with a Python SDK.",
       "controls": "Steering, movement and API control signals",
+      "controlsDetail": [
+        "Steering and movement signals",
+        "API commands from an agent",
+        "Multi-camera views from one world state"
+      ],
       "weights": "Not published in cited source",
       "weightsUrl": null,
       "weightLicense": "No public weight license verified",
       "commercial": "Service terms",
       "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
       "realtime": "Author claim",
+      "realtimeDetail": "22 fps at 512×768 with under 200 ms end-to-end latency.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -792,14 +1344,23 @@
     {
       "id": "odyssey-2-pro",
       "name": "Odyssey-2 Pro",
+      "organization": "Odyssey",
+      "released": "2026-01-23",
       "category": "Navigation",
+      "summary": "Odyssey-2 Pro is a world simulator that predicts how a scene evolves frame by frame and streams the result while you interact with it. Developers reach it through an API with JavaScript and Python SDKs.",
       "controls": "Text-driven interactive video simulation",
+      "controlsDetail": [
+        "A text prompt",
+        "Actions at chosen time steps",
+        "Programmatic control of interactive streams"
+      ],
       "weights": "Not published in cited source",
       "weightsUrl": null,
       "weightLicense": "No public weight license verified",
       "commercial": "Service terms",
       "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
       "realtime": "Author claim",
+      "realtimeDetail": "720p at 22 fps.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -817,16 +1378,130 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "odyssey-3",
+      "name": "Odyssey-3",
+      "organization": "Odyssey",
+      "released": "2026-10-08",
+      "category": "Physical simulation",
+      "summary": "Odyssey-3 is a learned simulator: an autoregressive diffusion transformer that builds an environment from a prompt and predicts how it changes as a person or an agent acts. Odyssey aims it at physical-AI work and offers it as a research preview.",
+      "controls": "A prompt, then a person's or an agent's actions",
+      "controlsDetail": [
+        "A prompt that creates the environment",
+        "Actions from a person or an AI agent"
+      ],
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "realtimeDetail": "Predicts how the environment changes in real time; no frame rate published.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://odyssey.systems/meet-odyssey-3"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official",
+          "url": "https://experience.odyssey.systems/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "pixverse-r1",
+      "name": "PixVerse R1",
+      "organization": "PixVerse",
+      "released": "2026-01-12",
+      "category": "Video interaction",
+      "summary": "PixVerse R1 keeps generating a live audiovisual world that responds to prompts and chat while a session runs, including shared worlds for several people since April 2026. The public experience is on PixVerse's site; API access is limited to approved partners.",
+      "controls": "Live prompts and chat in persistent, shared worlds",
+      "controlsDetail": [
+        "Live prompts",
+        "Chat",
+        "Avatars in shared worlds"
+      ],
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights. PixVerse describes API access as limited to qualified partners.",
+      "realtime": "Author claim",
+      "realtimeDetail": "1080p research capability and 720p on the partner API.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://pixverse.ai/en/blog/pixverse-r1-next-generation-real-time-world-model"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official",
+          "url": "https://world.pixverse.video/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "rtfm",
+      "name": "RTFM (World Labs)",
+      "organization": "World Labs",
+      "released": "2025-10-16",
+      "category": "Navigation",
+      "summary": "RTFM (Real-Time Frame Model) renders each new view of a 3D scene as you move, generating frames instead of building geometry. World Labs offers it as a research-preview browser demo for generated and real-world scenes.",
+      "controls": "Explore generated and real-world scenes in the browser",
+      "controlsDetail": [
+        "Movement through the scene in the browser",
+        "A choice of generated or real-world scenes"
+      ],
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "realtimeDetail": "Interactive frame rates; no figures published.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://www.worldlabs.ai/blog/rtfm"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official demo",
+          "url": "https://rtfm.worldlabs.ai/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "sana-wm",
       "name": "SANA-WM",
+      "organization": "NVIDIA (SANA team)",
+      "released": "2026-05",
       "category": "Navigation",
-      "controls": "Streaming world generation",
+      "summary": "SANA-WM is a 2.6B-parameter world model from NVIDIA's SANA team that follows a 6-DoF camera path for up to a minute of 720p video. A streaming variant and a hosted demo are available; the optional refiner builds on LTX-2.",
+      "controls": "6-DoF camera trajectory for minute-long 720p video",
+      "controlsDetail": [
+        "A starting image and prompt",
+        "A 6-DoF camera trajectory"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/Efficient-Large-Model/SANA-WM_streaming",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Unverified",
+      "realtimeDetail": "Generates 60 s of 720p video; a streaming variant is released. No real-time figure published.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -838,56 +1513,83 @@
           "url": "https://huggingface.co/Efficient-Large-Model/SANA-WM_streaming"
         }
       ],
-      "tryAt": [],
-      "checkedAt": "2026-10-23"
-    },
-    {
-      "id": "streamltx",
-      "name": "StreamLTX",
-      "category": "Video interaction",
-      "controls": "Streaming video generation",
-      "weights": "Available",
-      "weightsUrl": "https://huggingface.co/longxiaooo/StreamLTX",
-      "weightLicense": "Unverified",
-      "commercial": "Unverified",
-      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
-      "realtime": "Author claim",
-      "measurement": "Not independently measured for this directory",
-      "sources": [
+      "tryAt": [
         {
-          "label": "Project source",
-          "url": "https://huggingface.co/longxiaooo/StreamLTX"
+          "name": "Reactor demo",
+          "url": "https://sana-wm.reactor.inc/",
+          "note": "Demo linked from the official SANA repository."
         }
       ],
-      "tryAt": [],
       "checkedAt": "2026-10-23"
     },
     {
-      "id": "v-jepa-2",
-      "name": "V-JEPA 2",
-      "category": "Robotics",
-      "controls": "Latent action-conditioned prediction",
-      "weights": "Unverified",
-      "weightsUrl": null,
+      "id": "solarwm",
+      "name": "SolarWM",
+      "category": "Navigation",
+      "controls": "A first image plus a camera trajectory",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/junchaoh-cs/SolarWM-H3-33B",
       "weightLicense": "Unverified",
       "commercial": "Unverified",
-      "licenseNote": "Weight terms have not been resolved. A code license does not establish permission to use weights.",
+      "licenseNote": "The weights are gated on Hugging Face and no license is stated publicly.",
       "realtime": "Unverified",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
-          "label": "Project source",
-          "url": "https://github.com/facebookresearch/vjepa2"
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/junchaoh-cs/SolarWM-H3-33B"
         }
       ],
       "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "visko-orbis",
+      "name": "Visko Orbis",
+      "organization": "Visko",
+      "category": "Video interaction",
+      "summary": "Orbis is Visko's model for live, open-ended video: it keeps generating a scene and morphs toward each new prompt between short chunks, with memory carrying the scene forward. Visko describes it as interactive and physics-grounded.",
+      "controls": "Text prompts and an optional start image, steered between generated chunks",
+      "controlsDetail": [
+        "Text prompts, applied between chunks",
+        "An optional starting image"
+      ],
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "realtimeDetail": "Real-time generation. A hosted listing runs 832×480 at 18 fps in 1.8 s chunks.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://www.visko.ai/"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Reactor",
+          "url": "https://www.reactor.inc/models/visko-orbis-stable",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
       "checkedAt": "2026-10-23"
     },
     {
       "id": "vista",
       "name": "Vista",
+      "organization": "OpenDriveLab",
+      "released": "2024-05",
       "category": "Driving",
+      "summary": "Vista is a driving world model that predicts the road ahead from the current camera view and can be steered with several kinds of action: steering angle, speed, high-level commands, trajectories or goal points. It is a research model for planning and evaluation, not a live simulator.",
       "controls": "Driving trajectory conditioning",
+      "controlsDetail": [
+        "Steering angle and speed",
+        "High-level driving commands",
+        "Trajectories or goal points"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/OpenDriveLab/Vista",
       "weightLicense": "apache-2.0",
@@ -909,16 +1611,60 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "vivix-w1",
+      "name": "Vivix W1",
+      "organization": "Vivix",
+      "category": "Video interaction",
+      "summary": "Vivix W1 is a streaming model for worlds that evolve in real time, shaped by text, voice and motion. It is offered through an API priced per output second and a web playground; weights are not published.",
+      "controls": "Text, voice and motion",
+      "controlsDetail": [
+        "Text",
+        "Voice",
+        "Motion"
+      ],
+      "weights": "Not published in cited source",
+      "weightsUrl": null,
+      "weightLicense": "No public weight license verified",
+      "commercial": "Service terms",
+      "licenseNote": "Hosted service or research announcement. Service access does not grant a license to model weights.",
+      "realtime": "Author claim",
+      "realtimeDetail": "Real-time generation; the published speed test covers clip generation, not live latency.",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Official source",
+          "url": "https://platform.vivix.ai/vivix-w1-model/"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Official API and playground",
+          "url": "https://platform.vivix.ai/vivix-w1-model/",
+          "note": "Listed destination; access, version and live capacity must be checked with the provider."
+        }
+      ],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "waypoint-1-5",
       "name": "Waypoint 1.5",
+      "organization": "Overworld",
+      "released": "2026-04-08",
       "category": "Navigation",
+      "summary": "Waypoint 1.5 is Overworld's family of open, real-time video world models designed to run locally on consumer graphics cards. You start from an image or a clip and play with keyboard and mouse; the 1B model is Apache-2.0.",
       "controls": "Keyboard and mouse controls",
+      "controlsDetail": [
+        "A starting image or video",
+        "Keyboard",
+        "Mouse"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/Overworld/Waypoint-1.5-1B",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "Local real-time generation on consumer hardware.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -932,14 +1678,22 @@
     {
       "id": "wham",
       "name": "WHAM",
+      "organization": "Microsoft Research and Ninja Theory",
+      "released": "2025-02",
       "category": "Games",
+      "summary": "WHAM (World and Human Action Model) is the model behind Microsoft's Muse: it predicts gameplay frames and controller actions for the Xbox game Bleeding Edge. Weights for 200M and 1.6B versions are available for non-commercial research.",
       "controls": "Controller actions and game video",
+      "controlsDetail": [
+        "Game frames as a visual prompt",
+        "Controller actions"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/microsoft/wham",
       "weightLicense": "Microsoft Research License",
-      "commercial": "Custom terms",
-      "licenseNote": "The model card links the Microsoft Research License. Review its research-use terms.",
+      "commercial": "Non-commercial",
+      "licenseNote": "The Microsoft Research License permits non-commercial, non-revenue research use only.",
       "realtime": "Not real-time",
+      "realtimeDetail": "Inference is too slow for real-time use, per the model card.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -951,16 +1705,52 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "worldcrafter",
+      "name": "WorldCrafter",
+      "organization": "Tencent ARC",
+      "category": "Navigation",
+      "controls": "Camera control with implicit 3D-aware memory",
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/TencentARC/WorldCrafter-Base",
+      "weightLicense": "Unverified",
+      "commercial": "Unverified",
+      "licenseNote": "Neither the model card nor the repository states a license for the weights.",
+      "realtime": "Unverified",
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/TencentARC/WorldCrafter"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/TencentARC/WorldCrafter-Base"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-10-23"
+    },
+    {
       "id": "worldplay2",
       "name": "WorldPlay2",
+      "organization": "WorldPlay2 team",
+      "released": "2026-09-28",
       "category": "Navigation",
-      "controls": "Interactive world navigation",
+      "summary": "WorldPlay2 extends real-time world models in two directions: more kinds of control, including third-person characters and text-triggered events, and longer rollouts. Its weights are for non-commercial use (CC BY-NC 4.0).",
+      "controls": "WASD movement and arrow-key look, first- or third-person, with text events",
+      "controlsDetail": [
+        "WASD movement",
+        "Arrow-key look",
+        "First- or third-person perspective",
+        "Text-triggered events"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/aejion/WorldPlay2-Fast",
       "weightLicense": "cc-by-nc-4.0",
       "commercial": "Non-commercial",
-      "licenseNote": "The selected weight model card declares a non-commercial license.",
+      "licenseNote": "CC BY-NC 4.0 allows non-commercial use only.",
       "realtime": "Author claim",
+      "realtimeDetail": "Real-time interaction.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -978,14 +1768,22 @@
     {
       "id": "yume",
       "name": "YUME",
+      "released": "2025-12-26",
       "category": "Navigation",
-      "controls": "Image-conditioned world exploration",
+      "summary": "Yume is a long-running open project for interactive, realistic worlds created from text, images or video. Yume 1.5's 5B model lets you explore with keyboard-style directions, and its authors speed it up with distillation for streaming use.",
+      "controls": "Keyboard and mouse directions from an image or text",
+      "controlsDetail": [
+        "A text or image to start",
+        "Keyboard directions for movement",
+        "Camera turns"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/stdstu123/Yume-5B-720P",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
-      "realtime": "Unverified",
+      "realtime": "Author claim",
+      "realtimeDetail": "Real-time streaming acceleration through distillation; no frame rate in the model card.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1003,14 +1801,23 @@
     {
       "id": "zing",
       "name": "Zing",
+      "organization": "Seedleap",
+      "released": "2026-08-25",
       "category": "Games",
-      "controls": "Interactive game generation",
+      "summary": "Zing-0.5 is a 5B causal world model that keeps rolling a scene forward while keyboard actions and text prompts change it mid-stream. It starts from text or a single image, and the weights are Apache-2.0.",
+      "controls": "W/A/S/D/I/J/K/L keys and text prompts during a rollout",
+      "controlsDetail": [
+        "W/A/S/D and I/J/K/L keys",
+        "Text prompts during the rollout",
+        "A text or single-image start"
+      ],
       "weights": "Available",
       "weightsUrl": "https://huggingface.co/seedleap/zing-0.5",
       "weightLicense": "apache-2.0",
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
+      "realtimeDetail": "Real-time interaction; outputs 24 fps video.",
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
