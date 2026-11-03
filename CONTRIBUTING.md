@@ -8,4 +8,4 @@ For a hosted destination, link the model-specific page and identify any access o
 
 Check JSON validity and the `schema.json` contract in your editor. IDs must be unique. Every entry needs at least one primary source. Keep summaries in English, update only dates you actually reviewed, and explain evidence changes in the pull request. Unknown fields should remain explicitly unverified.
 
-Optional page fields (`organization`, `released`, `summary`, `controlsDetail`, `realtimeDetail`) feed the model pages on windflow.online/world-models. Write them from primary sources only, keep the summary to two or three factual sentences, and give real-time figures without hardware names.
+Optional page fields (`organization`, `released`, `summary`, `controlsDetail`, `realtimeDetail`, `howToRun`) feed the model pages on windflow.online/world-models. Write them from primary sources only, keep the summary to two or three factual sentences, and give real-time figures without hardware names.

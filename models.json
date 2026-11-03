@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-23",
+  "updatedAt": "2026-11-03",
   "methodology": "Alphabetical directory, not a ranking. Controls summarize primary sources. Real-time labels describe author claims, not verified performance. License labels refer to selected weight model cards; unresolved conflicts are explicit. Listed endpoints do not guarantee access or live capacity.",
   "providers": [
     {
@@ -38,6 +38,11 @@
       "commercial": "Permissive license declared",
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Unverified",
+      "howToRun": [
+        "Install the repository's dependencies and download the challenge data.",
+        "Generate frames with genie/generate.py and the 1x-technologies/GENIE_138M checkpoint, then view them with visualize.py.",
+        "Score the results with genie/evaluate.py."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -258,6 +263,11 @@
       "commercial": "Permissive license declared",
       "licenseNote": "The model card declares MIT. Ctrl-World is fine-tuned from Stable Video Diffusion, whose own license also applies to the base weights it needs.",
       "realtime": "Unverified",
+      "howToRun": [
+        "Create a Python 3.11 conda environment and install requirements.txt; to let the π0.5 policy act inside the world model, also install openpi.",
+        "Download the checkpoint and dataset listed in the README.",
+        "Replay recorded trajectories, steer the robot arm from the keyboard, or let the π0.5 policy act."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -338,6 +348,54 @@
       "checkedAt": "2026-10-23"
     },
     {
+      "id": "echo-memory",
+      "name": "Echo-Memory",
+      "organization": "JD Joy Future Academy",
+      "released": "2026-06-06",
+      "category": "Navigation",
+      "summary": "An action-conditioned world model study from JD that compares four kinds of memory for keeping a generated scene consistent when the camera leaves and comes back. It is built on Wan 2.1 1.3B and released with code, checkpoints and ComfyUI nodes under CC BY 4.0.",
+      "controls": "Starting image, prompt and camera actions",
+      "controlsDetail": [
+        "A first frame to start from",
+        "A text prompt",
+        "Camera actions for each chunk of video"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/Echo-Team/Echo-Memory",
+      "weightLicense": "cc-by-4.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "Attribution is required under CC BY 4.0. The checkpoints are fine-tunes of Wan 2.1 1.3B, which is Apache-2.0.",
+      "realtime": "Unverified",
+      "howToRun": [
+        "Download the Wan2.1-T2V-1.3B base model and one of the Echo-Memory checkpoints (context, compression or state-space memory) from Hugging Face.",
+        "Point the inference script at the base model and a first frame, then generate the video chunk by chunk with camera actions.",
+        "ComfyUI users can install the project's custom nodes (loader, camera action, generate) from its comfyui folder or the Comfy Registry."
+      ],
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/Echo-Team-Joy-Future-Academy-JD/Echo-Memory"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/Echo-Team/Echo-Memory"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2606.09803"
+        }
+      ],
+      "tryAt": [
+        {
+          "name": "Hugging Face Space",
+          "url": "https://huggingface.co/spaces/hugging-apps/echo-memory",
+          "note": "Browser demo: a first frame, a prompt and a camera action produce a five-second clip."
+        }
+      ],
+      "checkedAt": "2026-11-03"
+    },
+    {
       "id": "edenlive",
       "name": "EdenLive",
       "organization": "VAST",
@@ -357,6 +415,12 @@
       "licenseNote": "The video pipeline's weights are Apache-2.0, with an MIT CLIP encoder and a vision encoder under Meta's DINOv3 License. The optional first-frame workbench uses FLUX.2 [klein] under a non-commercial license.",
       "realtime": "Author claim",
       "realtimeDetail": "24 fps or higher at 480p or 720p, minute-scale generation.",
+      "howToRun": [
+        "Clone VAST-AI-Research/EdenLive, create a Python 3.10 conda environment, and install PyTorch and the pinned packages from the README.",
+        "Download VAST-AI/EdenLive from Hugging Face.",
+        "For offline clips, run python -m edenlive.scripts.infer.",
+        "For the live service, start the TURN relay (bash turn_server.sh), then the model service (bash start.sh 14b, or 5b)."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -381,6 +445,44 @@
         }
       ],
       "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "enerverse-ac",
+      "name": "EnerVerse-AC",
+      "organization": "AgiBot",
+      "released": "2025-05",
+      "category": "Robotics",
+      "summary": "An action-conditioned robot world model from AgiBot that generates the camera view a robot arm would see while it carries out a given sequence of actions. The released weights were trained only on the open AgiBot World dataset and are licensed for non-commercial use.",
+      "controls": "Robot actions and camera parameters",
+      "controlsDetail": [
+        "One start frame from the robot's camera",
+        "An action sequence for the robot",
+        "The camera's extrinsic and intrinsic parameters"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/agibot-world/EnerVerse-AC",
+      "weightLicense": "cc-by-nc-sa-4.0",
+      "commercial": "Non-commercial",
+      "licenseNote": "The model card declares CC BY-NC-SA 4.0: no commercial use, and anything you build from the weights must use the same license.",
+      "realtime": "Unverified",
+      "howToRun": [
+        "Create a Python 3.10 conda environment and install requirements.txt and PyTorch3D.",
+        "Download the single-view checkpoint from Hugging Face and the CLIP weights, and set both paths in the configs.",
+        "Prepare a start frame, an action file and camera parameter files; the repository includes a script that converts AgiBot World episodes into this format."
+      ],
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/AgibotTech/EnerVerse-AC"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/agibot-world/EnerVerse-AC"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-11-03"
     },
     {
       "id": "genie-3",
@@ -507,6 +609,11 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
       "realtimeDetail": "Minute-scale video at 19.5 fps end to end.",
+      "howToRun": [
+        "Clone PKU-YuanGroup/Helios, create a Python 3.11 conda environment, install PyTorch for your CUDA version, then run bash install.sh.",
+        "Download the checkpoint you need from Hugging Face: Helios-Base, Helios-Mid or Helios-Distilled.",
+        "Run the inference scripts in the repository, or load the model through Diffusers, which supports Helios."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -594,6 +701,11 @@
       "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 100 million monthly active users need a separate license from Tencent.",
       "realtime": "Author claim",
       "realtimeDetail": "A distilled version is described as suitable for real-time deployment; no frame rate in the README.",
+      "howToRun": [
+        "Clone Hunyuan-GameCraft-1.0, create a Python 3.10 conda environment and install requirements.txt and FlashAttention 2, or use the HunyuanVideo Docker image.",
+        "Download the pretrained models listed in the README.",
+        "Run inference with the provided scripts, or launch the Gradio demo with scripts/launch_app_sp.sh."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -626,6 +738,11 @@
       "commercial": "Custom terms",
       "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 1 million monthly active users need a separate license from Tencent.",
       "realtime": "Unverified",
+      "howToRun": [
+        "Create the conda environment from docker/HunyuanWorld.yaml and install Real-ESRGAN, ZIM and the other listed dependencies.",
+        "Log in to Hugging Face so the weights can download.",
+        "Generate a panorama from an image or a prompt, then turn it into a 3D world scene; you can name foreground objects to separate into layers."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -665,6 +782,11 @@
       "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea.",
       "realtime": "Unverified",
       "realtimeDetail": "The README reports offline generation times.",
+      "howToRun": [
+        "Create a Python 3.11 conda environment and install requirements.txt, flash-attn, xfuser, MoGe and utils3d.",
+        "Download the pretrained models listed in the README.",
+        "Generate camera-controlled video from an image and a camera path with the provided scripts."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -699,6 +821,12 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Unverified",
       "realtimeDetail": "Outputs 720×1280 at 24 fps from an 8-step distilled model.",
+      "howToRun": [
+        "Use the pre-packaged Docker image the README recommends, or install manually with uv sync --extra all.",
+        "Download tencent/Hy-Nomas from Hugging Face.",
+        "Run bash scripts/inference/inference_from_config.sh with configs/experiment/inference.yaml; a low-memory config is also provided.",
+        "Or load tencent/Hy-Nomas-Diffusers with HyNomasModularPipeline from the Diffusers branch the README links."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -738,6 +866,11 @@
       "commercial": "Custom terms",
       "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 1 million monthly active users need a separate license from Tencent.",
       "realtime": "Unverified",
+      "howToRun": [
+        "Create a Python 3.11 conda environment and install requirements.txt and gsplat.",
+        "Install FlashAttention and the extra world-generation dependencies.",
+        "Run world reconstruction (WorldMirror), panorama generation (HY-Pano) or world expansion (WorldStereo), the three parts of the release."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -778,6 +911,11 @@
       "licenseNote": "Not licensed in the European Union, the United Kingdom or South Korea. Services above 1 million monthly active users need a separate license from Tencent.",
       "realtime": "Author claim",
       "realtimeDetail": "Real-time latency with streaming generation.",
+      "howToRun": [
+        "Create a Python 3.10 conda environment and install requirements.txt and an attention library (SageAttention or flash-attn).",
+        "Run python download_models.py with your Hugging Face token to fetch every required model.",
+        "Set the model paths it prints and run the HunyuanVideo-based inference, steering the camera with a pose string or a trajectory."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -791,6 +929,48 @@
       ],
       "tryAt": [],
       "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "krea-realtime-14b",
+      "name": "Krea Realtime 14B",
+      "organization": "Krea",
+      "released": "2025-10",
+      "category": "Video interaction",
+      "summary": "A 14-billion-parameter text-to-video model that Krea distilled from Wan 2.1 14B with Self-Forcing, so it generates video frame by frame while you change the prompt. It can also restyle a live video, webcam or canvas input. The weights are Apache-2.0, but the official inference code is CC BY-NC-SA 4.0.",
+      "controls": "Text prompts and live video input",
+      "controlsDetail": [
+        "A text prompt, which you can change while it generates",
+        "A video, webcam stream or canvas drawing to restyle"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/krea/krea-realtime-video",
+      "weightLicense": "apache-2.0",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The model card declares Apache-2.0. The official inference code in krea-ai/realtime-video is under CC BY-NC-SA 4.0, so a commercial product needs its own inference code; the Wan 2.1 base model is Apache-2.0.",
+      "realtime": "Author claim",
+      "realtimeDetail": "11 fps text-to-video with 4 inference steps, and first frames within about a second, per the README and model card.",
+      "howToRun": [
+        "Install the inference code with uv sync, then an attention backend (FlashAttention, or the SageAttention wheel bundled in the repository) and FFmpeg.",
+        "Download the Wan2.1-T2V-1.3B base files and krea-realtime-video-14b.safetensors from Hugging Face.",
+        "Start release_server.py to stream frames live over a WebSocket, or run sample.py for offline clips."
+      ],
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Inference code",
+          "url": "https://github.com/krea-ai/realtime-video"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/krea/krea-realtime-video"
+        },
+        {
+          "label": "Technical blog post",
+          "url": "https://www.krea.ai/blog/krea-realtime-14b"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-11-03"
     },
     {
       "id": "lingbot-world",
@@ -812,6 +992,12 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
       "realtimeDetail": "Under 1 s latency while producing 16 fps at 480p or 720p.",
+      "howToRun": [
+        "Clone robbyant/lingbot-world and install requirements.txt (PyTorch 2.4 or newer) and flash-attn.",
+        "Download robbyant/lingbot-world-base-cam from Hugging Face or ModelScope.",
+        "For the real-time version, also download robbyant/lingbot-world-fast and run bash run_fast.sh with the weights folder and a frame count.",
+        "A quantized model is provided for machines with less GPU memory."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -852,6 +1038,11 @@
       "licenseNote": "CC BY-NC-SA 4.0 allows non-commercial use only, and anything built from the weights must carry the same license.",
       "realtime": "Author claim",
       "realtimeDetail": "A distilled real-time variant drives 720p streams at 60 fps.",
+      "howToRun": [
+        "Clone robbyant/lingbot-world-v2 and install requirements.txt and flash-attn.",
+        "Download lingbot-world-v2-14b-causal-fast, or the smaller lingbot-world-v2-1.3b-causal-fast, from Hugging Face.",
+        "Run bash run_fast.sh with the weights folder and a frame count; the 1.3B model also takes the 14B folder as its assets directory."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -985,6 +1176,11 @@
       "commercial": "Permissive license declared",
       "licenseNote": "The model card declares MIT. Downloads require accepting the card's terms on Hugging Face.",
       "realtime": "Unverified",
+      "howToRun": [
+        "Clone SkyworkAI/Matrix-3D with its submodules, create a Python 3.10 environment, install PyTorch and run the installation script.",
+        "Download the checkpoints with python code/download_checkpoints.py.",
+        "Generate a panorama, turn it into a panoramic video, then into a 3D scene, with the scripts in code/. A Gradio demo is also included."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1019,6 +1215,11 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
       "realtimeDetail": "25 fps.",
+      "howToRun": [
+        "Create a Python 3.10 conda environment, install apex, FlashAttention and requirements.txt, then run python setup.py develop in the Matrix-Game-2 folder.",
+        "Download Skywork/Matrix-Game-2.0 from Hugging Face.",
+        "Run inference.py to generate a clip, or inference_streaming.py to generate while you play."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1052,6 +1253,11 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
       "realtimeDetail": "40 fps at 720p with distillation and quantization.",
+      "howToRun": [
+        "Create a Python 3.12 conda environment and install FlashAttention and requirements.txt.",
+        "Download the Matrix-Game-3.0 weights from Hugging Face.",
+        "Run the inference script; num_iterations sets the length, with 57 + (num_iterations − 1) × 40 frames in total."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1087,6 +1293,12 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
       "realtimeDetail": "20 fps at 720p, from the paper.",
+      "howToRun": [
+        "Clone the Matrix-Game-3.5 repository, create a Python 3.10 conda environment, and install PyTorch for your CUDA version and requirements.txt.",
+        "Download Matrix-Game-3.5-Base (and Matrix-Game-3.5-Distilled for the distilled first-person model) from Hugging Face.",
+        "Also download Wan2.2-TI2V-5B, which supplies the text encoder and VAE, and Depth-Anything-3, which the memory uses.",
+        "Run infer.py with --person first or --person third; third-person mode can take reference crops to fix the protagonist's look."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1120,6 +1332,11 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption. Each released checkpoint covers one game scene.",
       "realtime": "Author claim",
       "realtimeDetail": "Up to 67 fps at 864×480 in steady state, excluding video I/O.",
+      "howToRun": [
+        "Clone SkyworkAI/Matrix-Game and, in the Matrix-Game-4 folder, install PyTorch and the package with its inference, server and download extras.",
+        "Build the sample game with bash scripts/build_game.sh, then play and record it with bash scripts/play.sh --scene ancient-egypt.",
+        "For a browser demo, start bash scripts/serve.sh. The racing game has its own build script."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1160,6 +1377,12 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Unverified",
       "realtimeDetail": "1280×704 at 16 fps, generated one second at a time by a 4-step distilled model.",
+      "howToRun": [
+        "Clone TingtingLiao/memorizon, create a Python 3.11 conda environment and run pip install -e .",
+        "Run python scripts/generate.py with the Luffuly/memorizon-1280x704-4step checkpoint and a starting image.",
+        "Steer it with keyboard actions, one every 0.25 seconds, or replay a recorded trajectory.",
+        "In Python, the checkpoint loads with MemorizonPipeline.from_pretrained."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1252,6 +1475,11 @@
       "commercial": "Non-commercial",
       "licenseNote": "Hugging Face metadata says CC BY 4.0, but the project README licenses code and weights under CC BY-NC 4.0. The stricter, non-commercial reading is shown.",
       "realtime": "Unverified",
+      "howToRun": [
+        "Clone facebookresearch/nwm and install the packages listed in the README.",
+        "Download the pretrained model.",
+        "Use isolated_nwm_infer.py to predict the next view after an action or to follow a recorded trajectory, and isolated_nwm_eval.py to score the results."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1411,6 +1639,88 @@
         }
       ],
       "checkedAt": "2026-10-23"
+    },
+    {
+      "id": "orbis",
+      "name": "Orbis",
+      "organization": "University of Freiburg",
+      "released": "2025-07",
+      "category": "Driving",
+      "summary": "A driving world model from the University of Freiburg that predicts long front-camera video rollouts from a few past frames, built to keep long-horizon predictions from degrading. Code and checkpoints are released under MIT.",
+      "controls": "Past driving video frames",
+      "controlsDetail": [
+        "A few past frames from a car's front camera",
+        "How many future frames to generate"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/lmb-freiburg/Orbis",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "howToRun": [
+        "Clone lmb-freiburg/orbis and create the conda environment from environment.yml.",
+        "Download the tokenizer and world model checkpoints from Hugging Face and place them in the experiment folders.",
+        "Run evaluate/rollout.py on the example input frames, or point a config file at your own frames."
+      ],
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/lmb-freiburg/Orbis"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/lmb-freiburg/Orbis"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2507.13162"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-11-03"
+    },
+    {
+      "id": "orbis-2",
+      "name": "Orbis 2",
+      "organization": "University of Freiburg",
+      "released": "2026-07",
+      "category": "Driving",
+      "summary": "A hierarchical driving world model: a low-frame-rate predictor supplies long-range context and a high-rate predictor fills in detail, generating long future video from past frames. An optional steering trajectory lets you ask what happens if the car turns. Released under MIT.",
+      "controls": "Past driving video and an optional steering trajectory",
+      "controlsDetail": [
+        "An input driving video to take context from",
+        "An optional trajectory file that steers the car"
+      ],
+      "weights": "Available",
+      "weightsUrl": "https://huggingface.co/sud0301/orbis2",
+      "weightLicense": "mit",
+      "commercial": "Permissive license declared",
+      "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
+      "realtime": "Unverified",
+      "howToRun": [
+        "Clone lmb-freiburg/orbis2 and create the conda environment from environment.yml.",
+        "Download the tokenizer and the L1 and L2 checkpoints with hf download sud0301/orbis2.",
+        "Run evaluate/rollout_demo_v2.py on an input video; add a trajectory file to steer the rollout."
+      ],
+      "measurement": "Not independently measured for this directory",
+      "sources": [
+        {
+          "label": "Project source",
+          "url": "https://github.com/lmb-freiburg/orbis2"
+        },
+        {
+          "label": "Weights and model card",
+          "url": "https://huggingface.co/sud0301/orbis2"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.15898"
+        }
+      ],
+      "tryAt": [],
+      "checkedAt": "2026-11-03"
     },
     {
       "id": "pixverse-r1",
@@ -1751,6 +2061,11 @@
       "licenseNote": "CC BY-NC 4.0 allows non-commercial use only.",
       "realtime": "Author claim",
       "realtimeDetail": "Real-time interaction.",
+      "howToRun": [
+        "Create a Python 3.10 conda environment and install requirements.txt and flash-attn.",
+        "Download the Wan2.2-I2V-A14B base model and the WorldPlay2 checkpoints (Fast, BI or AR) from Hugging Face.",
+        "Set the checkpoint paths and run bash run_few_step.sh."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1784,6 +2099,11 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
       "realtimeDetail": "Real-time streaming acceleration through distillation; no frame rate in the model card.",
+      "howToRun": [
+        "Install requirements.txt; a Windows one-click installer is also provided.",
+        "Download the weights and set their path in the inference scripts.",
+        "Run one of the scripts in scripts/inference, for example sample.sh, or sample_5b.sh for the 5B model."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
@@ -1818,6 +2138,11 @@
       "licenseNote": "The selected weight model card declares this license. Check the license text, dependencies and intended use before adoption.",
       "realtime": "Author claim",
       "realtimeDetail": "Real-time interaction; outputs 24 fps video.",
+      "howToRun": [
+        "Run bash run.sh with a messages file of prompts and actions; ready-made examples cover text-started, image-started and prompt-switched rollouts.",
+        "To serve it, launch it with SGLang and drive it from examples/zing_0_5/client.py.",
+        "Sliding-window options (--local-attn-size and --sink-size) set how much past video the model attends to."
+      ],
       "measurement": "Not independently measured for this directory",
       "sources": [
         {
