@@ -1,0 +1,9 @@
+{
+  "packagedAt": "2026-11-09",
+  "sourceReviewedAt": "2026-11-03",
+  "release": "v2026.11.09",
+  "entryCount": 56,
+  "modelsSha256": "e7cf660be0435f84d79ba1ea7d594ff1481d96f2b59854904ce399934f8827c7",
+  "csvSha256": "e65b1148d1d5b52982b4c92b4a107dc1f5c95954911dad078121ba02ff21756b",
+  "scope": "Packaging and documentation release. No new source reviews or model measurements are claimed."
+}

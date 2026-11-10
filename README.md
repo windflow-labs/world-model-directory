@@ -1,12 +1,16 @@
 # World Model Directory
 
-A source-linked directory of world models maintained by Windflow. The directory contains 51 entries spanning interactive video, navigation, games, driving, robotics and spatial worlds. Entries and providers are alphabetical, with no scores, sponsored placement or preferred hosting provider.
+A source-linked directory of world models maintained by Windflow. The directory contains 56 entries spanning interactive video, navigation, games, driving, robotics and spatial worlds. Entries and providers are alphabetical, with no scores, sponsored placement or preferred hosting provider.
 
 An entry needs at least one way to run or try the model: published weights, a public demo or a public API. Research announcements with none of these stay out until one exists, and withdrawn or empty weight repositories do not count.
 
 - `models.json`: the editable dataset.
 - `schema.json`: JSON Schema (2020-12) describing the data contract.
 - `CONTRIBUTING.md`: how to submit additions and corrections.
+- `exports/models.csv`: a flat export for analysis; nested fields remain JSON strings.
+- `DATASET_CARD.md`: fields, collection method, limitations and reuse terms.
+- `CITATION.cff`: machine-readable citation metadata.
+- `snapshot.json`: release packaging date, source-review date, row count and file hashes.
 
 ## Methodology
 
@@ -27,3 +31,11 @@ Corrections arrive as pull requests. Maintainers review primary sources before u
 ## Data reuse
 
 The original factual compilation and original text in this repository are offered under CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/. This does not license any linked models, weights, datasets, trademarks or source documents.
+
+## Cite or download a snapshot
+
+Use a tagged release when citing the directory. The November 9, 2026 packaging release contains 56 entries from the November 3 source-review snapshot; it does not imply that every source was checked again on November 9.
+
+> Windflow Labs. World Model Directory. Source snapshot 2026-11-03, packaging release v2026.11.09. https://github.com/windflow-labs/world-model-directory
+
+Download `models.json` for nested source/provider records or `exports/models.csv` for a flat table. The export preserves original field values; arrays are serialized as JSON inside their CSV cell. Collection-page realtime labels are author claims, not independent benchmarks.
