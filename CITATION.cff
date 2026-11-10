@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite the source snapshot and release version when reusing this directory."
+type: dataset
+title: World Model Directory
+authors:
+  - name: Windflow Labs
+version: v2026.11.09
+date-released: 2026-11-09
+url: https://github.com/windflow-labs/world-model-directory
+repository-code: https://github.com/windflow-labs/world-model-directory
+license: CC0-1.0
+abstract: "Source-linked controls, weight-license declarations, author realtime claims and hosted destinations. Source snapshot 2026-11-03; 56 entries. Not an independent benchmark."
